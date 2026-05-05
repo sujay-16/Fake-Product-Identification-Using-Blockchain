@@ -1,50 +1,79 @@
-# Fake Product Identification using Blockchain
+Fake Product Identification using Blockchain
+Overview
 
-## Packages Required:-
-- Truffle v5.6.7 (core: 5.6.7)
-- Ganache v7.5.0
-- Solidity v0.5.16 (solc-js)
-- Node v15.8.0
-- Web3.js v1.7.4
-- npm 7.5.1
+This project is a decentralized application (DApp) that detects and prevents counterfeit products using blockchain technology. It ensures product authenticity by storing product details on a blockchain, making them immutable and verifiable.
 
-## Other Requirements:-
-1. Any chromium based browser i.e. Chrome 
-2. Metamask browser extension
-    
-## setup process 
+Users can:
 
-1. Clone the project
-```
-git clone https://github.com/A4ANK/Fake-Product-Identification.git
-```
-2. Go to the project folder, open terminal there and run following command to install required node_modules:-
-```
+Register products on the blockchain
+Verify product authenticity
+Track ownership and product details securely
+Tech Stack
+Blockchain Framework: Truffle
+Local Blockchain: Ganache
+Smart Contracts: Solidity
+Frontend: HTML, CSS, JavaScript
+Web3 Integration: Web3.js
+Wallet: MetaMask
+Prerequisites
+
+Make sure you have the following installed:
+
+Node.js (Recommended: v14–18)
+npm
+Truffle
+Ganache
+MetaMask Extension
+Chromium-based browser (Chrome recommended)
+Installation & Setup
+1. Clone the Repository
+git clone https://github.com/sujay-16/Fake-Product-identification-using-blockchain.git
+cd Fake-Product-identification-using-blockchain
+2. Install Dependencies
 npm install
-```
-3. Compile contract source files. (Compilation and deployment can be done using truffle migrate):-
-```
+Running the Project
+Step 1: Start Ganache
+Open Ganache
+Create a new workspace
+Add truffle-config.js
+Ensure:
+Port: 7545
+Network ID: 5777
+Step 2: Configure MetaMask
+Open MetaMask
+Add a new network:
+Network Name: Ganache Local
+RPC URL: http://127.0.0.1:7545
+Chain ID: 1337
+Import an account using a private key from Ganache
+Step 3: Compile Smart Contracts
 truffle compile
-```
-4. Open Ganache, (to setup local blockchain)
-    - crerate new workspace
-    - add truffle-config.js  in truffle project 
-    - change port to 7545 in server settings (same as port in truffle-config.js)
-5. In chrome, open metamask 
-   - add new test network using  
-        - NETWORK ID (i.e. 5777 ,from Ganache Server settings) 
-        - RPC SERVER (i.e HTTP://127.0.0.1:8545 ,from Ganache Server settings)
-        - CHAIN CODE (i.e. 1337)
-   - import account using private key of any account from local blockchain available in Ganache.
-6. In terminal, run following commands:-
-- Run migrations to deploy contracts.
-```
+Step 4: Deploy Contracts
 truffle migrate
-```
+Step 5: Run the Application
+npm run dev
+Open browser at: http://localhost:3000
+Connect MetaMask to the application
+Features
+Product registration on blockchain
+Tamper-proof data storage
+Product authenticity verification
+Decentralized trust mechanism
+Project Structure
+├── contracts/        # Solidity smart contracts
+├── migrations/       # Deployment scripts
+├── src/              # Frontend files
+├── test/             # Test cases
+├── truffle-config.js # Truffle configuration
+Notes
+Make sure Ganache is running before deploying contracts
+MetaMask must be connected to the same network
+Do not use mainnet or real funds for testing
+Future Improvements
+QR code integration for product scanning
+Mobile app support
+Integration with supply chain systems
+Enhanced UI/UX
+License
 
-- To start a server and it will open a homepage (index.html) file in the default browser.
-```
-npm run dev 
-``` 
-7. Login to metamask ,and connect the added account to local blockchain (i.e.localhost:3000)
-8. Interact with website
+This project is for educational purposes. You can modify and use it as needed.
